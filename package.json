@@ -3,24 +3,39 @@
   "version": "1.0.0",
   "description": "Converts Soramimi karaoke files to .ass",
   "main": "index.js",
+  "bin": {
+    "soramimi-to-ass": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "http://lab.shelter.moe/axelterizaki/soramimi-to-ass"
+    "url": "https://lab.shelter.moe/axelterizaki/soramimi-to-ass.git"
+  },
+  "bugs": {
+    "url": "https://lab.shelter.moe/axelterizaki/soramimi-to-ass/issues",
+    "email": "axel@teri-chan.net"
   },
   "keywords": [
-    "ass",
+	"ass",
+	"ssa",
     "subtitles",
     "karaoke",
     "soramimi"
   ],
-  "author": "Guillaume Lebigot",
+  "author": "Guillaume Lebigot <axel@teri-chan.net> @AxelTerizaki @AxelTerizaki@shelter.moe",
   "license": "MIT",
   "dependencies": {
     "ass-parser": "^0.2.0",
     "ass-stringify": "^0.1.3",
     "striptags": "^3.1.1"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-flowtype": "^2.50.0"
+  },
+  "engines": { "node": ">= 8.4.0" },
+  "private": false
 }
