@@ -24,11 +24,15 @@ It applies a basic style to it which can be modified later.
 
 Just supply the name of a .txt Soramimi file as your first argument, wether you call it in command line or as a module.
 
+```sh
+soramimi-to-ass myfile.txt
+```
+
 ### Module
 
 Supply the main function with the Soramimi karaoke contents.
 
-```
+```JS
 import convertToASS from 'soramimi-to-ass';
 
 ...
