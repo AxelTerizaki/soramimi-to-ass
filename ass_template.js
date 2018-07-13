@@ -14,6 +14,10 @@ module.exports.ScriptInfo = {
 			value: ' go to http://www.eswat.demon.co.uk/'
 		},
 		{
+			type: 'comment',
+			value: 'Converted using Soramimi-to-ass : https://lab.shelter.moe/axelterizaki/soramimi-to-ass'
+		},
+		{
 			key: 'Title',
 			value: ''
 		},
@@ -28,9 +32,9 @@ module.exports.ScriptInfo = {
 		{
 			key: 'PlayResX',
 			value: 0
-		}		
+		}
 	]
-}
+};
 
 module.exports.Styles = {
 	section: 'V4 Styles',
@@ -43,10 +47,16 @@ module.exports.Styles = {
 				'Fontsize',
 				'PrimaryColour',
 				'SecondaryColour',
-				'TertiaryColour',
+				'OutlineColour',
 				'BackColour',
 				'Bold',
 				'Italic',
+				'Underline',
+				'StrikeOut',
+				'ScaleX',
+				'ScaleY',
+				'Spacing',
+				'Angle',
 				'BorderStyle',
 				'Outline',
 				'Shadow',
@@ -54,7 +64,6 @@ module.exports.Styles = {
 				'MarginL',
 				'MarginR',
 				'MarginV',
-				'AlphaLevel',
 				'Encoding'
 			]
 		},
@@ -63,7 +72,7 @@ module.exports.Styles = {
 			value: {
 				'Name': 'Default',
 				'Fontname': 'Arial',
-				'Fontsize': '33',
+				'Fontsize': '20',
 				'PrimaryColour': '&H00FFFFFF',
 				'SecondaryColour': '&H000088EF',
 				'OutlineColour': '&H00000000',
@@ -72,43 +81,43 @@ module.exports.Styles = {
 				'Italic': '0',
 				'Underline': '0',
 				'StrikeOut': '0',
-				'BorderStyle': '1',
 				'ScaleX': '100',
 				'ScaleY': '100',
 				'Spacing': '0',
 				'Angle': '0',
-				'Outline': '1',
-				'Shadow': '5',
+				'BorderStyle': '1',
+				'Outline': '3',
+				'Shadow': '0',
 				'Alignment': '8',
-				'MarginL': '18',
-				'MarginR': '18',
-				'MarginV': '17',
+				'MarginL': '10',
+				'MarginR': '10',
+				'MarginV': '10',
 				'Encoding': '1'
 			}
 		}
 	]
-}
+};
 
 module.exports.Events = {
 	section: 'Events',
-    body: [
-        {
+	body: [
+		{
         	key: 'Format',
-            'value': [
+			'value': [
 				'Layer',
-                'Start',
-                'End',
-                'Style',
-                'Name',
-                'MarginL',
-                'MarginR',
-                'MarginV',
-                'Effect',
-                'Text'
-            ]
-        }        
-    ]
-}
+				'Start',
+				'End',
+				'Style',
+				'Name',
+				'MarginL',
+				'MarginR',
+				'MarginV',
+				'Effect',
+				'Text'
+			]
+		}
+	]
+};
 
 module.exports.Dialogue = {
 	'key': 'Dialogue',
@@ -123,5 +132,5 @@ module.exports.Dialogue = {
 		'MarginV': '0',
 		'Effect': 'karaoke',
 		'Text': ''
-		}
-}
+	}
+};
