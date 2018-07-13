@@ -23,21 +23,25 @@ module.exports.ScriptInfo = {
 		},
 		{
 			key: 'ScriptType',
-			value: 'v4.00'
+			value: 'v4.00+'
 		},
 		{
-			key: 'PlayResY',
+			key: 'WrapStyle',
 			value: 0
 		},
 		{
-			key: 'PlayResX',
-			value: 0
+			key: 'ScaledBorderAndShadow',
+			value: 'yes'
+		},
+		{
+			key: 'Collisions',
+			value: 'Normal'
 		}
 	]
 };
 
 module.exports.Styles = {
-	section: 'V4 Styles',
+	section: 'V4+ Styles',
 	body: [
 		{
 			key: 'Format',
@@ -122,7 +126,7 @@ module.exports.Events = {
 module.exports.Dialogue = {
 	'key': 'Dialogue',
 	'value': {
-		'Layer': '0',
+		'Layer': '1',
 		'Start': '0:00:00.00',
 		'End': '0:00:00.00',
 		'Style': 'Default',
@@ -130,7 +134,7 @@ module.exports.Dialogue = {
 		'MarginL': '0',
 		'MarginR': '0',
 		'MarginV': '0',
-		'Effect': 'karaoke',
+		'Effect': '',
 		'Text': ''
 	}
 };
