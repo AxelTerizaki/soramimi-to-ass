@@ -1,6 +1,6 @@
 {
   "name": "soramimi-to-ass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Converts Soramimi karaoke files to .ass",
   "main": "index.js",
   "bin": {
