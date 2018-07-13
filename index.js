@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+'use strict';
 const parser = require('ass-parser');
 const fs = require('fs');
 const stringify = require('ass-stringify');
@@ -32,6 +34,10 @@ function isOdd(num) {
 }
 
 async function mainCLI() {
+	if (!process.argv[2]) {
+		throw `Soramimi-to-ass - Convert Soramimi karaoke to ASS files
+		Usage: soramimi-to-ass myfile.ass`;
+	}
 	const file = process.argv[2];
 	if (!await asyncExists(file)) throw `File ${file} does not exist`;
 	const soramimi = await asyncRead(file, 'utf8');
