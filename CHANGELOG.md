@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.0.3
+
+- Removed unused/replaceable deps
+
+## 1.0.2
+
+- Fixed ASS template to use script V4+ format explicitely
+
 ## 1.0.1
 
 - Fixed default style
