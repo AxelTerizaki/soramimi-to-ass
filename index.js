@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 'use strict';
-const parser = require('ass-parser');
 const fs = require('fs');
 const stringify = require('ass-stringify');
 const util = require('util');
-const stripTags = require('striptags');
 const ass = require('./ass_template');
 
 function asyncExists(file){
@@ -46,7 +44,7 @@ async function mainCLI() {
 
 function convertToASS(soramimi) {
 	// Removing HTML tags
-	const soramimiStripped = stripTags(soramimi);
+	const soramimiStripped = soramimi.replace(/<(.|\n)*?>/g, '');
 	const lines = soramimiStripped.split('\n');
 	let dialogue = [];
 	for (const y in lines) {
