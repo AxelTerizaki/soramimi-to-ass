@@ -25,8 +25,10 @@ It applies a basic style to it which can be modified later.
 Just supply the name of a .txt Soramimi file as your first argument, wether you call it in command line or as a module.
 
 ```sh
-soramimi-to-ass myfile.txt
+soramimi-to-ass myfile.txt [myfile.ass]
 ```
+
+In command-line, second argument is optional : if it's not provided, output will be made to stdout.
 
 ### Module
 

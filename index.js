@@ -34,7 +34,9 @@ function isOdd(num) {
 async function mainCLI() {
 	if (!process.argv[2]) {
 		throw `Soramimi-to-ass - Convert Soramimi karaoke to ASS files
-		Usage: soramimi-to-ass myfile.ass`;
+		Usage: soramimi-to-ass myfile.txt [myfile.ass]
+		If no output file specified, the script outputs to stdout
+		`;
 	}
 	const file = process.argv[2];
 	if (!await asyncExists(file)) throw `File ${file} does not exist`;
@@ -48,7 +50,8 @@ function convertToASS(soramimi) {
 	const lines = soramimiStripped.split('\n');
 	let dialogue = [];
 	for (const y in lines) {
-		if (lines[y] === '' || lines[y] === '\r') continue;
+		// Lines not starting with a timestamp are ignored
+		if (!lines[y].startsWith('[')) continue;
 		let event = {};
 		event = clone(ass.Dialogue);
 		const arr = lines[y].replace(/\[/g,'|').replace(/\]/g,'|').split('|');
@@ -71,7 +74,14 @@ function convertToASS(soramimi) {
 }
 
 if (require.main === module) mainCLI()
-	.then(data => console.log(data))
+	.then(data => {
+		if (process.argv[3]) {
+			console.log(process.argv[2]);
+			fs.writeFileSync(process.argv[3],data,'utf-8');
+		} else {
+			console.log(data);
+		}
+	})
 	.catch(err => console.log(err));
 
 module.exports = convertToASS;

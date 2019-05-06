@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.5
+
+- Better blank lines detection (now ignoring if there's no timestamp)
+- Optional file output name can be provided. If none, outputs go to stdout
+
 ## 1.0.4
 
 - Added blank lines detection (containing a single carriage return)
