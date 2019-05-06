@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.0.4
+
+- Added blank lines detection (containing a single carriage return)
+
 ## 1.0.3
 
 - Removed unused/replaceable deps

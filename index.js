@@ -48,7 +48,7 @@ function convertToASS(soramimi) {
 	const lines = soramimiStripped.split('\n');
 	let dialogue = [];
 	for (const y in lines) {
-		if (lines[y] === '') continue;
+		if (lines[y] === '' || lines[y] === '\r') continue;
 		let event = {};
 		event = clone(ass.Dialogue);
 		const arr = lines[y].replace(/\[/g,'|').replace(/\]/g,'|').split('|');

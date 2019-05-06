@@ -2,7 +2,7 @@
 
 This nodeJS module converts Soramimi karaoke files (.txt) to Substation Alpha/Aegisub files (.ass).
 
-Soramimi karaoke's software and lyric files can be found at their official site
+Soramimi karaoke's software and lyrics files can be found at their official site
 
 * [http://www.soramimi.nl/](http://www.soramimi.nl/)
 
@@ -34,9 +34,6 @@ Supply the main function with the Soramimi karaoke contents.
 
 ```JS
 import convertToASS from 'soramimi-to-ass';
-
-...
-
 const file = 'karaoke.txt';
 const soramimiData = await fs.readFile(file, 'utf8');
 const ass = convertToASS(soramimiData);
